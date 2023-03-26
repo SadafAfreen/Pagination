@@ -30,7 +30,7 @@ class newFile extends Command
         fclose($file);
 
         if($file){
-            $this->info("File already exists");
+            $this->info("File exists already");
         } else {
             $this->info("Success:File is created in public directory");
         }
