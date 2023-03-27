@@ -34,7 +34,7 @@ class CustomerController extends Controller
             ['path' => url()->current()]
         );
 
-        return view('customers', compact('current_records','paginator','all_records'));
+        return view('customers', compact('current_records','paginator'));
     }
 
     public function paginationQueryBuilder() : View{
@@ -54,4 +54,13 @@ class CustomerController extends Controller
         return view('customers', compact('current_records'));
     }
 
+    public function paginationAJAX(Request $request): View{
+        $current_records = Customer::take(100)->paginate(10);
+        
+        if($request->ajax()){
+            return view('customers', compact('current_records'));
+        }
+
+        return view('customers', compact('current_records'));
+    }
 }

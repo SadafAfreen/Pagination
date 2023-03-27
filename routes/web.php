@@ -15,8 +15,8 @@ use App\Http\Controllers\CustomerController;
 */
 
 //Route::get('/', [CustomerController::class, 'Show']);
-Route::get('/', [CustomerController::class, 'paginationManual']);
+//Route::get('/', [CustomerController::class, 'paginationManual']);
 //Route::get('/', [CustomerController::class, 'paginationQueryBuilder']);
 //Route::get('/', [CustomerController::class, 'paginationQueryBuilderSimplePaginate']);
 //Route::get('/', [CustomerController::class, 'paginationEloquent']);
-
+Route::get('/', [CustomerController::class, 'paginationAJAX']);

@@ -10,6 +10,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\showDB::class,
         Commands\newFile::class,
+        Commands\sendEmails::class,
     ];
     /**
      * Define the application's command schedule.
